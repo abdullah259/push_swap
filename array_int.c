@@ -1,27 +1,26 @@
 #include "push_swap.h"
 
-int	*arr_int(char **sp,t_data *data)
+void	*arr_int(char **sp,t_data *data)
 {
-	int	i;
-	int	*j;
 	int m;
 
 	m = 0;
-	i = 0;
-	j = 0;
-	while (sp[i])
-	{
+	while (sp[data->size_array])
 		data->size_array++;
-		i++;
-	}
-	j = malloc(i * sizeof(int) + 1);
-	data->stack_b = malloc(i * sizeof(int) + 1);
-	if (!j)
+	data->stack_a = malloc(data->size_array * sizeof(int));
+	if (!data->stack_a)
+		return (NULL);
+	data->stack_b = malloc(data->size_array * sizeof(int));
+	if (!data->stack_b)
+		return (NULL);
+	data->order_array = malloc(data->size_array * sizeof(int));
+	if (!data->order_array)
 		return (NULL);
 	while (sp[m])
 	{
-		j[m] = ft_atoi(sp[m]);
+		data->stack_a[m] = ft_atoi(sp[m]);
+		data->order_array[m] = ft_atoi(sp[m]);
 		m++;
 	}
-	return (j);
+	return (NULL);
 }

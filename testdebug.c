@@ -30,30 +30,33 @@
 // 		return (-1);
 // 	return ((int)(pon * num));
 // }
-size_t	ft_strlcpy(char *det, const char *src, size_t size)
-{
-	size_t i;
+// size_t	ft_strlcpy(char *det, const char *src, size_t size)
+// {
+// 	size_t i;
 
-	i = 0;
-	while (i + 1 < size && src[i])
-	{
-		det[i] = src[i];
-		i++;
-	}
-	if (size >= 1)
-	{
-		det[i] = '\0';
-	}
-	while (src[i])
-	{
-		i++;
-	}
-	return(i);
-}
+// 	i = 0;
+// 	while (i + 1 < size && src[i])
+// 	{
+// 		det[i] = src[i];
+// 		i++;
+// 	}
+// 	if (size >= 1)
+// 	{
+// 		det[i] = '\0';
+// 	}
+// 	while (src[i])
+// 	{
+// 		i++;
+// 	}
+// 	return(i);
+// }
 int main()
 {
-	char sr[] = "omar";
-	char des[4];
-	printf("%lu\n",ft_strlcpy(des,sr,2));
-	printf("%s\n",des);
+	int i;
+	int j;
+
+	i = 5;
+	j = i;
+	j = 9;
+	printf("this i %d\n and this is j %d\n",i,j);
 }

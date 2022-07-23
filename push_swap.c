@@ -20,34 +20,6 @@ void	check_after_num(char c, char c1, char c2)
 	}
 }
 
-void	check_alpha(char **argv)
-{
-	int	i;
-	int	j;
-
-	i = 1;
-	j = 0;
-	while (argv[i])
-	{
-		j = 0;
-		while (argv[i][j])
-		{
-			// if (argv[i][j] >= 'a' && argv[i][j] <= 'z')
-			// {
-			// 	printf("error\n");
-			// 	exit(1);
-			// }
-			if ((argv[i][j] >= 'a' && argv[i][j] <= 'z') || (argv[i][j] >= 'A' && argv[i][j] <= 'Z'))
-			{
-				printf("error\n");
-				exit(1);
-			}
-			j++;
-		}
-		i++;
-	}
-}
-
 void	check_valid(char **argv)
 {
 	int	i;
@@ -70,6 +42,17 @@ void	check_valid(char **argv)
 	}
 }
 
+void	ft_init(t_data *data)
+{
+	data->size_array = 0;
+	data->stack_a = 0;
+	data->stack_b = 0;
+	data->order_array = 0;
+	data->top_a = 0;
+	data->top_b = 0;
+	data->size_stack_b = 0;
+}
+
 int main(int arc, char **argv)
 {
 	int i;
@@ -79,6 +62,7 @@ int main(int arc, char **argv)
 	int n;
 	t_data data;
 
+	ft_init (&data);
 	data.size_array = 0;
 	i = 1;
 	if (arc < 2)
@@ -93,16 +77,22 @@ int main(int arc, char **argv)
 			ft_putendl_fd("empty string", 2);
 			exit(1);
 		}
-		check_alpha(argv);
 		check_valid(argv);
 		join = ft_join_arg(argv);
 		sp = ft_split(join,' ');
-		data.stack_a = arr_int(sp,&data);
-		data.top_a = data.size_array - 1;
+		arr_int(sp,&data);
+		check_dub(data.stack_a,&data);
+		order_array(data.order_array, &data);
+		data.top_a = data.size_array;
+		// printf("this is topa %d\n",data.top_a);
 		data.top_b = -1;
 		if (data.size_array == 3)
 		{
 			sort_three(&data);
+		}
+		else if (data.size_array == 4)
+		{
+			sort_four(&data);
 		}
 		m = 0;
 		n = 0;

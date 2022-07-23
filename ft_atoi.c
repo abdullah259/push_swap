@@ -16,10 +16,6 @@ int		ft_atoi(char *str)
 	num = 0;
 	i = 0;
 	pon = 1;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	if (str[i] == 39 || ((str[i] >= '0' && str[i] <= '0') && (str[i+1] == 39)))
-		i++;
 	if (str[i] == '-' || str[i] == '+')
 		pon *= 1 - 2 * (str[i++] == '-');
 	if (!is_digit(str[i]))
