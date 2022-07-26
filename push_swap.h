@@ -26,5 +26,6 @@ int		*rra(t_data *data);
 void	pb(t_data *data);
 void	pa(t_data *data);
 void	sort_three(t_data *data);
+void	sort_three4(t_data *data);
 void	sort_four(t_data *data);
 void	order_array(int *array, t_data *data);

@@ -23,7 +23,6 @@ void	order_array(int *array, t_data *data)
 			if (array[i] > array[j])
 			{
 				ft_swap(&array[i],&array[j]);
-				break;
 			}
 			j++;
 		}

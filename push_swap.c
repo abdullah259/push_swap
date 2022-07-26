@@ -83,7 +83,8 @@ int main(int arc, char **argv)
 		arr_int(sp,&data);
 		check_dub(data.stack_a,&data);
 		order_array(data.order_array, &data);
-		data.top_a = data.size_array;
+		data.top_a = 0;
+		// data.top_a = 0;
 		// printf("this is topa %d\n",data.top_a);
 		data.top_b = -1;
 		if (data.size_array == 3)
@@ -96,11 +97,12 @@ int main(int arc, char **argv)
 		}
 		m = 0;
 		n = 0;
-		while (n < data.size_array)
+		while (n <= data.size_array - 1)
 		{
-			printf("%d\n",data.stack_a[m]);
+			printf(" %d",data.stack_a[m]);
 			m++;
 			n++;
 		}
+		printf("\n");
 	}
 }
