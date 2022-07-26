@@ -54,7 +54,7 @@ void	sort_three4(t_data *data)
 			&& data->stack_a[a] > data->stack_a[c])
 	{
 		ra(data);
-	}//
+	}
 	else if (data->stack_a[a] < data->stack_a[b] && data->stack_a[b] > data->stack_a[c]
 			&&
 			data->stack_a[a] < data->stack_a[c])

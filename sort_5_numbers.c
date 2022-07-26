@@ -36,7 +36,7 @@ void	sort_four(t_data *data)
 	// 	printf(" %d", data->stack_a[i]);
 	// }
     // printf("\n");
-    printf("it is index %d\n",index);
+    // printf("it is index %d\n",index
 	while (data->stack_a[data->top_a] != data->order_array[0])
 	{
 	    // index = get_smallest(data); // 3

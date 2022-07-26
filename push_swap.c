@@ -58,8 +58,8 @@ int main(int arc, char **argv)
 	int i;
 	char *join;
 	char **sp;
-	int m;
-	int n;
+	// int m;
+	// int n;
 	t_data data;
 
 	ft_init (&data);
@@ -95,14 +95,14 @@ int main(int arc, char **argv)
 		{
 			sort_four(&data);
 		}
-		m = 0;
-		n = 0;
-		while (n <= data.size_array - 1)
-		{
-			printf(" %d",data.stack_a[m]);
-			m++;
-			n++;
-		}
-		printf("\n");
+		// m = 0;
+		// n = 0;
+		// while (n <= data.size_array - 1)
+		// {
+		// 	printf(" %d",data.stack_a[m]);
+		// 	m++;
+		// 	n++;
+		// }
+		// printf("\n");
 	}
 }
