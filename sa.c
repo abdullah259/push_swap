@@ -11,6 +11,5 @@ void		sa(t_data *data)
 	temp = data->stack_a[data->top_a];
 	data->stack_a[data->top_a] = data->stack_a[data->top_a + 1];
 	data->stack_a[data->top_a + 1] = temp;
-	printf("Twmp %d \n ", temp);
 	printf("%s\n","sa");
 }

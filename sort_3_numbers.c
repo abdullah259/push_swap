@@ -36,34 +36,35 @@ void	sort_three(t_data *data)
 
 void	sort_three4(t_data *data)
 {
-	if (data->stack_a[1] > data->stack_a[2] && data->stack_a[2] < data->stack_a[3]
-		&& data->stack_a[1] < data->stack_a[3])
+    int a = data->top_a;
+    int b = data->top_a + 1;
+    int c = data->top_a + 2;
+	if (data->stack_a[a] > data->stack_a[b] && data->stack_a[b] < data->stack_a[c]
+		&& data->stack_a[a] < data->stack_a[c])
 	{
 		sa(data);
 	}
-	else if (data->stack_a[1] > data->stack_a[2] && data->stack_a[2] > data->stack_a[3]
-			&& data->stack_a[1] > data->stack_a[3])
+	else if (data->stack_a[a] > data->stack_a[b] && data->stack_a[b] > data->stack_a[c]
+			&& data->stack_a[a] > data->stack_a[c])
 	{
 		sa(data);
 		rra(data);
 	}
-	else if (data->stack_a[1] > data->stack_a[2] && data->stack_a[2] < data->stack_a[3]
-			&& data->stack_a[1] > data->stack_a[3])
+	else if (data->stack_a[a] > data->stack_a[b] && data->stack_a[b] < data->stack_a[c]
+			&& data->stack_a[a] > data->stack_a[c])
 	{
 		ra(data);
-	}
-	else if (data->stack_a[1] < data->stack_a[2] && data->stack_a[2] > data->stack_a[3]
+	}//
+	else if (data->stack_a[a] < data->stack_a[b] && data->stack_a[b] > data->stack_a[c]
 			&&
-			data->stack_a[1] < data->stack_a[3])
+			data->stack_a[a] < data->stack_a[c])
 	{
 		sa(data);
 		ra(data);
 	}
-	else if (data->stack_a[1] < data->stack_a[2] && data->stack_a[2] > data->stack_a[3] 
-			&& data->stack_a[1] > data->stack_a[3])
+	else if (data->stack_a[a] < data->stack_a[b] && data->stack_a[b] > data->stack_a[c] 
+			&& data->stack_a[a] > data->stack_a[c])
 	{
 		rra(data);
 	}
-	else
-		printf("sorted");
 }

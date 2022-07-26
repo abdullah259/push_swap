@@ -89,7 +89,7 @@ int main(int arc, char **argv)
 		data.top_b = -1;
 		if (data.size_array == 3)
 		{
-			sort_three(&data);
+			sort_three4(&data);
 		}
 		else if (data.size_array == 4)
 		{
