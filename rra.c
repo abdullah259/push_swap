@@ -13,7 +13,6 @@ int	*rra(t_data *data)
 		i--;
 	}
 	data->stack_a[data->top_a] = temp;
-	// printf("rra\n");
     write(1, "rra\n", 4);
 	return (data->stack_a);
 }

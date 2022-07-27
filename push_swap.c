@@ -91,7 +91,7 @@ int main(int arc, char **argv)
 		{
 			sort_three4(&data);
 		}
-		else if (data.size_array == 4)
+		else if (data.size_array == 4 || data.size_array == 5)
 		{
 			sort_four(&data);
 		}
