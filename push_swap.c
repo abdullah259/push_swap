@@ -99,7 +99,7 @@ int main(int arc, char **argv)
 		}
 		m = 0;
 		n = 0;
-		// printf("%d\n",data.top_b);
+		printf("%d\n",data.top_a);
 		while (n < data.top_b)
 		{
 			printf(" %d",data.stack_b[m]);

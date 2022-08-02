@@ -30,6 +30,7 @@ void	sort_hundred(t_data *data)
 		}
 		range += 2;
 	}
+    printf("this is top_b %d\n and this is size array%d\n",data->top_a,data->size_array);
 	if (data->top_b < data->size_array)
 	{
 		count = data->size_array - data->top_b;
@@ -55,7 +56,8 @@ void	sort_hundred(t_data *data)
 	// 	}
 	// 	b++;
 	// }
-	sb(data);
-	// printf("this is size array for stack_b %d\n and this is the index %d\n",bigest,index);
+	// sb(data);
+	// printf("this is the top_b %d\n",data->size_array);
+	// printf("this is top_b in stack_b %d\n",data->stack_b[data->top_b]);
 	// pa(data);
 }

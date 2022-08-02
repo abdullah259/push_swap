@@ -7,7 +7,6 @@ void	pb(t_data *data)
 		data->stack_b[data->top_b + 1] = data->stack_a[data->top_a];
 		data->top_a +=1;
 		data->top_b +=1;
-		// data->size_array--;
 		data->size_stack_b++;
 	}
 	write(1,"pb\n",3);
