@@ -58,8 +58,8 @@ int main(int arc, char **argv)
 	int i;
 	char *join;
 	char **sp;
-	// int m;
-	// int n;
+	int m;
+	int n;
 	t_data data;
 
 	ft_init (&data);
@@ -84,8 +84,6 @@ int main(int arc, char **argv)
 		check_dub(data.stack_a,&data);
 		order_array(data.order_array, &data);
 		data.top_a = 0;
-		// data.top_a = 0;
-		// printf("this is topa %d\n",data.top_a);
 		data.top_b = -1;
 		if (data.size_array == 3)
 		{
@@ -95,14 +93,21 @@ int main(int arc, char **argv)
 		{
 			sort_four(&data);
 		}
-		// m = 0;
-		// n = 0;
-		// while (n <= data.size_array - 1)
-		// {
-		// 	printf(" %d",data.stack_a[m]);
-		// 	m++;
-		// 	n++;
-		// }
-		// printf("\n");
+		else if (data.size_array > 5)
+		{
+			sort_hundred(&data);
+		}
+		m = 0;
+		n = 0;
+		// printf("%d\n",data.top_b);
+		while (n < data.top_b)
+		{
+			printf(" %d",data.stack_b[m]);
+			m++;
+			n++;
+		}
+		printf("\n");
 	}
+
 }
+

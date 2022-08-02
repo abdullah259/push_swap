@@ -50,13 +50,62 @@
 // 	}
 // 	return(i);
 // }
-int main()
+int	check_doubles(char *s, int i, char c)
+{
+	int j;
+
+	j = 0;
+	while (j < i)
+	{
+		if (s[j] == c)
+			return (0);
+		j++;
+	}
+	return (1);
+}
+int check_dob(char *str,char c)
+{
+	int i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] == c)
+			return (0);
+		i++;	
+	}
+	return (1);
+}
+int main(int arc, char **sp)
 {
 	int i;
 	int j;
 
-	i = 5;
-	j = i;
-	j = 9;
-	printf("this i %d\n and this is j %d\n",i,j);
+	j = 0;
+	i = 0;
+	if (arc == 3)
+	{
+		while (sp[1][i])
+		{
+			if (check_doubles(sp[1],i,sp[1][i]))
+			{
+				write(1,&sp[1][i],1);
+			}
+			i++;
+		}
+		// write(1,"\n",1);
+		// printf("this is %d\n",i);
+		i = 0;		
+		while (sp[2][i])
+		{
+			if (check_dob(sp[1],sp[2][i]) == 1 && check_doubles(sp[2],i,sp[2][i]) == 1)
+			{
+				write(1,&sp[2][i],1);
+			}
+			i++;
+		}
+		
+	}
+	write(1,"\n",1);
+	
 }
