@@ -4,10 +4,10 @@ void	sb(t_data *data)
 {
 	int temp;
 
-	temp = data->stack_b[data->top_b - 1]; // 1000
+	temp = data->stack_b[data->size_stack_b - 1]; // 1000
 	// printf("this is temp inside %d\n",temp);
 	// printf("this is  top_b %d\n",data->stack_b[data->top_b - 2]);
-	data->stack_b[data->top_b - 1] = data->stack_b[data->top_b - 2];
-	data->stack_b[data->top_b - 2] = temp;
+	data->stack_b[data->size_stack_b - 1] = data->stack_b[data->size_stack_b - 2];
+	data->stack_b[data->size_stack_b - 2] = temp;
 	write(1, "sb\n", 3);
 }

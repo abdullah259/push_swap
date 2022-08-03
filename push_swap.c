@@ -99,10 +99,10 @@ int main(int arc, char **argv)
 		}
 		m = 0;
 		n = 0;
-		printf("%d\n",data.top_a);
-		while (n < data.top_b)
+		printf("size_array          %d and         top_b %d\n",data.size_stack_b,data.top_b);
+		while (n < data.size_array)
 		{
-			printf(" %d",data.stack_b[m]);
+			printf(" %d",data.stack_a[m]);
 			m++;
 			n++;
 		}
